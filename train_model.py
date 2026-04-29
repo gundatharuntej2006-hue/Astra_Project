@@ -54,8 +54,10 @@ scaler = StandardScaler()
 X_scaled = scaler.fit_transform(X)
 
 print("Training Random Forest...")
-# Using a smaller number of trees for speed in this environment
-model = RandomForestClassifier(n_estimators=30, random_state=42, n_jobs=-1)
+# Memory-tuned for Render's 512MB free tier. Override locally with RF_ESTIMATORS env var.
+n_est = int(os.environ.get("RF_ESTIMATORS", "20"))
+model = RandomForestClassifier(n_estimators=n_est, random_state=42, n_jobs=1)
+X_scaled = X_scaled.astype(np.float32)
 model.fit(X_scaled, y)
 
 print("Saving models...")
