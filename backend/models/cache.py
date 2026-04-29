@@ -15,7 +15,7 @@ from backend.models.trainer import SHAP_AVAILABLE
 
 logger = logging.getLogger("soc.cache")
 
-CACHE_VERSION = 4  # bump when train_all_models output schema changes (v4: RF restored, bounded n_jobs)
+CACHE_VERSION = 5  # bump when train_all_models output schema changes (v5: smaller RFs for 512MB free tier)
 
 
 def _dataset_fingerprint(file_path):
