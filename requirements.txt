@@ -25,4 +25,5 @@ requests==2.33.1
 # Utilities
 qrcode==8.2
 Pillow==12.2.0
-gunicorn
+gunicorn==23.0.0
+
