@@ -1,0 +1,27 @@
+# AI Threat Detection SOC — backend dependencies
+# Pinned for reproducible installs. Update via: pip install -U <pkg> && pip freeze | grep <pkg>
+
+# Web framework
+Flask==3.1.3
+flask-cors==6.0.2
+Werkzeug==3.1.8
+python-dotenv==1.2.2
+
+# Data + ML
+numpy==2.4.4
+pandas==3.0.2
+scikit-learn==1.8.0
+scipy==1.17.1
+joblib==1.5.3
+shap==0.51.0
+
+# Database (UBA module)
+SQLAlchemy==2.0.49
+
+# External services
+google-genai==1.73.1
+requests==2.33.1
+
+# Utilities
+qrcode==8.2
+Pillow==12.2.0

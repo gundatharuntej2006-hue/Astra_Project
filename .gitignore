@@ -1,30 +1,50 @@
-# Dependencies
-node_modules/
-frontend/node_modules/
-
 # Python
 __pycache__/
-*.pyc
+*.py[cod]
+*$py.class
+*.so
+.Python
 .venv/
 venv/
+env/
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
 
-# Environment
-.env
-
-# Trained models & data (large files)
+# Trained models & data (regenerable)
 *.pkl
 KDDTrain+.txt
+KDDTest+.txt
+*.csv.gz
 uba_logs.db
+uba_logs.db-journal
 
-# Build output
+# Secrets
+.env
+.env.local
+.env.*.local
+
+# Node / frontend
+node_modules/
+frontend/node_modules/
 dist/
 build/
+.vite/
+*.log
 *.zip
 
 # IDE
 .vscode/
 .idea/
+*.swp
+*.swo
 
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
+
+# Generated artifacts
+*.tmp
+*.bak
